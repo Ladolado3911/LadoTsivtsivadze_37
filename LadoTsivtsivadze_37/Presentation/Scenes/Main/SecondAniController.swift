@@ -55,13 +55,6 @@ class SecondAniController: UIViewController {
         }
         else {
             print("Portrait")
-            UIView.animate(withDuration: 1) { [weak self] in
-                guard let self = self else { return }
-                self.headlineLabel.layer.opacity = 1.0
-                self.portraitBtn.layer.opacity = 1.0
-                //self.testLabel.layer.opacity = 0.0
-            }
-            
             UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                     self.headlineLabel.layer.opacity = 1.0
