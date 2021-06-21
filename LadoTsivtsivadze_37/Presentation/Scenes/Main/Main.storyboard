@@ -46,10 +46,52 @@
                     <view key="view" contentMode="scaleToFill" id="xR4-hs-0DG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="fzK-LD-uXW">
+                                <rect key="frame" x="67" y="373" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="abt-wr-A5C"/>
+                                    <constraint firstAttribute="width" constant="280" id="g37-Hh-gzl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpf-uI-UOq">
+                                <rect key="frame" x="67" y="317" width="166" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eja-8x-rwY">
+                                <rect key="frame" x="20" y="745" width="374" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ttd-Yy-fuJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ttd-Yy-fuJ" firstAttribute="bottom" secondItem="eja-8x-rwY" secondAttribute="bottom" constant="20" id="1wC-rL-G6C"/>
+                            <constraint firstItem="Ttd-Yy-fuJ" firstAttribute="trailing" secondItem="eja-8x-rwY" secondAttribute="trailing" constant="20" id="2hn-oe-nYR"/>
+                            <constraint firstItem="fzK-LD-uXW" firstAttribute="centerY" secondItem="xR4-hs-0DG" secondAttribute="centerY" id="A88-4U-LnK"/>
+                            <constraint firstItem="fzK-LD-uXW" firstAttribute="top" secondItem="lpf-uI-UOq" secondAttribute="bottom" constant="20" id="PMK-uK-Kfw"/>
+                            <constraint firstItem="fzK-LD-uXW" firstAttribute="centerX" secondItem="xR4-hs-0DG" secondAttribute="centerX" id="ePW-fK-5vf"/>
+                            <constraint firstItem="eja-8x-rwY" firstAttribute="leading" secondItem="Ttd-Yy-fuJ" secondAttribute="leading" constant="20" id="hfc-Vu-Uu3"/>
+                            <constraint firstItem="fzK-LD-uXW" firstAttribute="leading" secondItem="lpf-uI-UOq" secondAttribute="leading" id="t3f-jB-z5j"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" id="8x7-Wr-UNl"/>
+                    <connections>
+                        <outlet property="headlineLabel" destination="lpf-uI-UOq" id="LDZ-7R-juM"/>
+                        <outlet property="imgView" destination="fzK-LD-uXW" id="XX3-CD-Fwv"/>
+                        <outlet property="portraitBtn" destination="eja-8x-rwY" id="s6A-1D-e0i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNf-Hv-7kJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,6 +140,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zMc-Cd-qgP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E9j-Hw-hCk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -114,8 +157,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="card" width="394" height="249"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
