@@ -57,13 +57,14 @@ class ThirdAniController: UIViewController {
     }
     
     @objc func swipeAction(gesture: UISwipeGestureRecognizer) {
+        let y = (UIScreen.main.bounds.height / 2) + 150
+        let screenHeight = UIScreen.main.bounds.height
+        
         switch gesture.direction {
         case .up:
             print("up")
             UIView.animate(withDuration: 0.2) { [weak self] in
                 guard let self = self else { return }
-                let y = (UIScreen.main.bounds.height / 2) + 150
-                let screenHeight = UIScreen.main.bounds.height
                 
                 let newFrame = CGRect(x: 0,
                                       y: 0,
@@ -89,16 +90,16 @@ class ThirdAniController: UIViewController {
                                    height: 300)
                 
                 let txtViewFrame = CGRect(x: (UIScreen.main.bounds.width / 2) - 90,
-                                          y: <#T##CGFloat#>,
+                                          y: (UIScreen.main.bounds.height / 2) + 150,
                                           width: 180,
-                                          height: <#T##CGFloat#>)
+                                          height: screenHeight - y - 45)
                 
                 self.imgView.frame = newFrame
+                self.textView.frame = txtViewFrame
                 self.textView.alpha = 0
             }
         default:
             break
         }
     }
-    
 }
