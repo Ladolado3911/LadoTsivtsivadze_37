@@ -17,8 +17,11 @@ class ThirdAniController: UIViewController {
                            height: 300)
         
         let imgView = UIImageView(frame: frame)
-        //imgView.image = UIImage(named: "card")
-        imgView.backgroundColor = .green
+        //imgView.backgroundColor = .green
+        imgView.image = UIImage(named: "york")
+        imgView.clipsToBounds = true
+        imgView.contentMode = .scaleAspectFill
+        imgView.layer.cornerRadius = 5
         return imgView
     }()
     
