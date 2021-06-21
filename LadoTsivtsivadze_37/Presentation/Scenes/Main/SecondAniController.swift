@@ -38,7 +38,8 @@ class SecondAniController: UIViewController {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
 
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) {
+            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) { [weak self] in
+                guard let self = self else { return }
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                     self.headlineLabel.layer.opacity = 0.0
                     self.portraitBtn.layer.opacity = 0.0
