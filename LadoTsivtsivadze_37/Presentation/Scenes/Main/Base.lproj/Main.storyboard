@@ -8,21 +8,89 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--First-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="FirstAniController" id="BYZ-38-t0r" customClass="FirstAniController" customModule="LadoTsivtsivadze_37" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-cd-vDE">
+                                <rect key="frame" x="20" y="751" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="onAnimate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9K-3H-eZR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aX5-cd-vDE" secondAttribute="trailing" constant="20" id="S3n-pf-Mvy"/>
+                            <constraint firstItem="aX5-cd-vDE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dgf-5O-dAD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aX5-cd-vDE" secondAttribute="bottom" constant="20" id="yYk-bT-3DD"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="l9w-J3-bWz"/>
+                    <tabBarItem key="tabBarItem" title="First" id="l9w-J3-bWz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1104" y="850"/>
+            <point key="canvasLocation" x="-1383" y="850"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="GZ9-lr-DYK">
+            <objects>
+                <viewController storyboardIdentifier="SecondAniController" id="4Fk-uf-jmf" customClass="SecondAniController" customModule="LadoTsivtsivadze_37" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xR4-hs-0DG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ttd-Yy-fuJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="8x7-Wr-UNl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNf-Hv-7kJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="850"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="KRY-Xr-Zeo">
+            <objects>
+                <viewController storyboardIdentifier="ThirdAniController" id="kY4-33-9gP" customClass="ThirdAniController" customModule="LadoTsivtsivadze_37" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KME-g3-tEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Wo-We-lTM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" id="r2O-p8-WWY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgD-eR-3Hk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="850"/>
+        </scene>
+        <!--Fourth-->
+        <scene sceneID="acj-kK-0a1">
+            <objects>
+                <viewController storyboardIdentifier="FourthAniController" id="ex2-TW-Qyf" customClass="FourthAniController" customModule="LadoTsivtsivadze_37" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pw7-EW-UBe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l3C-mm-kN6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fourth" id="O5h-a4-Gco"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxk-If-Moz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cFo-Sx-kdV">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="1243" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YTV-cQ-W47">
@@ -35,6 +103,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="H1b-DI-UPe"/>
+                        <segue destination="4Fk-uf-jmf" kind="relationship" relationship="viewControllers" id="F8X-Vx-mse"/>
+                        <segue destination="kY4-33-9gP" kind="relationship" relationship="viewControllers" id="NKe-Ii-xI9"/>
+                        <segue destination="ex2-TW-Qyf" kind="relationship" relationship="viewControllers" id="Jxn-Cl-yAX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BO-6X-yLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
