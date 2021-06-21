@@ -8,15 +8,15 @@
 import UIKit
 
 struct CenterPoints {
-    static var x: CGFloat = (UIScreen.main.bounds.width / 2) - 75
-    static var y: CGFloat = (UIScreen.main.bounds.height / 2) - 75
+    static var x: CGFloat = (UIScreen.main.bounds.width / 2)
+    static var y: CGFloat = (UIScreen.main.bounds.height / 2)
 }
 
 class FirstAniController: UIViewController {
     
     private var blueBox: UIView = {
-        let frame = CGRect(x: CenterPoints.x,
-                           y: CenterPoints.y,
+        let frame = CGRect(x: CenterPoints.x - 75,
+                           y: CenterPoints.y - 75,
                            width: 150,
                            height: 150)
         let box = UIView(frame: frame)
@@ -38,7 +38,7 @@ class FirstAniController: UIViewController {
 
     @IBAction func onAnimate(_ sender: Any) {
         blueBox.isHidden = false
-        UIView.animateKeyframes(withDuration: 0.5, delay: 2, options: .allowUserInteraction) { [weak self] in
+        UIView.animateKeyframes(withDuration: 0.5, delay: 1, options: .allowUserInteraction) { [weak self] in
             guard let self = self else { return }
             self.blueBox.frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: 0, height: 0)
             self.blueBox.alpha = 0.0
