@@ -73,16 +73,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v0G-RR-MgJ">
+                                <rect key="frame" x="67" y="543" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="do0-o1-LZP">
+                                <rect key="frame" x="298" y="543" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ttd-Yy-fuJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ttd-Yy-fuJ" firstAttribute="bottom" secondItem="eja-8x-rwY" secondAttribute="bottom" constant="20" id="1wC-rL-G6C"/>
                             <constraint firstItem="Ttd-Yy-fuJ" firstAttribute="trailing" secondItem="eja-8x-rwY" secondAttribute="trailing" constant="20" id="2hn-oe-nYR"/>
+                            <constraint firstItem="v0G-RR-MgJ" firstAttribute="top" secondItem="fzK-LD-uXW" secondAttribute="bottom" constant="20" id="7wh-7J-m5n"/>
                             <constraint firstItem="fzK-LD-uXW" firstAttribute="centerY" secondItem="xR4-hs-0DG" secondAttribute="centerY" id="A88-4U-LnK"/>
+                            <constraint firstItem="do0-o1-LZP" firstAttribute="trailing" secondItem="fzK-LD-uXW" secondAttribute="trailing" id="G2p-xd-xbW"/>
                             <constraint firstItem="fzK-LD-uXW" firstAttribute="top" secondItem="lpf-uI-UOq" secondAttribute="bottom" constant="20" id="PMK-uK-Kfw"/>
+                            <constraint firstItem="do0-o1-LZP" firstAttribute="top" secondItem="fzK-LD-uXW" secondAttribute="bottom" constant="20" id="TZy-74-5pL"/>
                             <constraint firstItem="fzK-LD-uXW" firstAttribute="centerX" secondItem="xR4-hs-0DG" secondAttribute="centerX" id="ePW-fK-5vf"/>
                             <constraint firstItem="eja-8x-rwY" firstAttribute="leading" secondItem="Ttd-Yy-fuJ" secondAttribute="leading" constant="20" id="hfc-Vu-Uu3"/>
+                            <constraint firstItem="v0G-RR-MgJ" firstAttribute="leading" secondItem="fzK-LD-uXW" secondAttribute="leading" id="iDh-Me-RRu"/>
                             <constraint firstItem="fzK-LD-uXW" firstAttribute="leading" secondItem="lpf-uI-UOq" secondAttribute="leading" id="t3f-jB-z5j"/>
                         </constraints>
                     </view>
@@ -90,7 +104,9 @@
                     <connections>
                         <outlet property="headlineLabel" destination="lpf-uI-UOq" id="LDZ-7R-juM"/>
                         <outlet property="imgView" destination="fzK-LD-uXW" id="XX3-CD-Fwv"/>
+                        <outlet property="picker" destination="do0-o1-LZP" id="eab-Wo-pQS"/>
                         <outlet property="portraitBtn" destination="eja-8x-rwY" id="s6A-1D-e0i"/>
+                        <outlet property="switcher" destination="v0G-RR-MgJ" id="AxI-RI-0Eu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNf-Hv-7kJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,18 +12,23 @@ class SecondAniController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var portraitBtn: UIButton!
+
+    
+    @IBOutlet weak var switcher: UISegmentedControl!
+    @IBOutlet weak var picker: UISwitch!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if UIDevice.current.orientation.isPortrait {
-            //testLabel.isHidden = true
+            switcher.alpha = 1
+            picker.alpha = 1
         }
         else {
-            //testLabel.isHidden = false
+            switcher.alpha = 0.0
+            picker.alpha = 0.0
         }
-
-
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -33,21 +38,19 @@ class SecondAniController: UIViewController {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
 
-            UIView.animateKeyframes(withDuration: 1, delay: 0, options: .allowUserInteraction) {
+            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                     self.headlineLabel.layer.opacity = 0.0
                     self.portraitBtn.layer.opacity = 0.0
                 }
-                UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
-                    <#code#>
+                UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.5) {
+                    self.switcher.alpha = 1
+                    self.picker.alpha = 1
                 }
         
             } completion: { (success) in
                 
             }
-
-            
-            
         }
         else {
             print("Portrait")
@@ -56,6 +59,19 @@ class SecondAniController: UIViewController {
                 self.headlineLabel.layer.opacity = 1.0
                 self.portraitBtn.layer.opacity = 1.0
                 //self.testLabel.layer.opacity = 0.0
+            }
+            
+            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) {
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
+                    self.headlineLabel.layer.opacity = 1.0
+                    self.portraitBtn.layer.opacity = 1.0
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.5) {
+                    self.switcher.alpha = 0
+                    self.picker.alpha = 0
+                }
+            } completion: { (success) in
+                
             }
         }
     }
